@@ -4,7 +4,7 @@ from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filte
 from telegram.ext import CommandHandler
 from dotenv import load_dotenv
 
-from users import guardar_chat_id, eliminar_chat_id
+from sheets import guardar_chat_id, eliminar_chat_id
 from scrapper import scrapper
 
 load_dotenv()
