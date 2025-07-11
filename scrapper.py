@@ -2,7 +2,7 @@ from telegram.ext import ContextTypes
 import requests
 from bs4 import BeautifulSoup
 
-from users import get_chat_ids
+from sheets import get_chat_ids
 
 URL = "https://www.mifuturo.cl/bases-de-datos-de-matriculados/"
 TEXTO_BUSCADO = "2025"
