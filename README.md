@@ -1,4 +1,4 @@
-# BotMonitor
+# TelegramBotMonitor
 
 Bot de Telegram que monitorea cambios en sitios web y envía notificaciones cuando encuentra texto específico. Diseñado específicamente para monitorear la página de Mifuturo.cl en busca de actualizaciones sobre datos de matrícula del año 2025.
 
