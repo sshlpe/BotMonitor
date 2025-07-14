@@ -2,7 +2,8 @@ from telegram.ext import ContextTypes
 import requests
 from bs4 import BeautifulSoup
 
-from sheets import get_chat_ids
+#from sheets import get_chat_ids
+from users import get_chat_ids
 
 URL = "https://www.mifuturo.cl/bases-de-datos-de-matriculados/"
 TEXTO_BUSCADO = "2025"
@@ -26,7 +27,7 @@ async def scrapper(context: ContextTypes.DEFAULT_TYPE):
     print("🔍 Ejecutando scrapper...")
     try:
         html = obtener_html()
-        if html and analizar_html(html):
+        if html and analizar_html(html, TEXTO_BUSCADO):
             print(f"✅ ¡Texto '{TEXTO_BUSCADO}' encontrado!")
             for chat_id in get_chat_ids():
                 await context.bot.send_message(
@@ -38,9 +39,3 @@ async def scrapper(context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         print(f"❌ Error en el scrapper: {e}")
 
-
-
-if __name__ == "__main__":
-    html = obtener_html()
-    if html:
-        print(analizar_html(html))

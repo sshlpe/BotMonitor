@@ -1,6 +1,6 @@
 import os 
 
-ARCHIVO_USUARIOS = "users.txt"
+ARCHIVO_USUARIOS = "/data/users.txt"
 
 def guardar_chat_id(chat_id):
     if not os.path.exists(ARCHIVO_USUARIOS):
